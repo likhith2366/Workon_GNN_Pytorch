@@ -2,26 +2,30 @@
 
 ![output](output.gif)
 
-### If you are not a techie and have 7 min, you can read the article on this project [here](https://medium.com/@abin_varghese/dive-into-graph-neural-networks-with-pytorch-a-simple-guide-49c425faf909).
 
 This repository contains a PyTorch implementation of a Graph Neural Network (GNN) for node classification tasks on graph-structured data. The implementation is based on the PyTorch Geometric library and follows a modular design, separating the code into different modules for better organization and maintainability.
 
 ## Project Structure
 
-The project is structured as follows:
-
 ```
-simple_gnn/
+workon_gnn_pytorch/
 ├── gnn/
-│ ├── init.py
-│ ├── model.py
-│ ├── data.py
-│ ├── train.py
-│ └── evaluate.py
-├── main.py
-└── LICENSE
+│   ├── __init__.py
+│   ├── model.py              # GCN model
+│   ├── gat_model.py          # GAT model with attention
+│   ├── data.py               # Data loading
+│   ├── train.py              # Basic training
+│   ├── train_with_viz.py     # Training with visualization
+│   ├── evaluate.py           # Model evaluation
+│   └── visualize.py          # Visualization tools
+├── visualizations/           # Generated HTML files
+├── main.py                   # Basic training script
+├── simple_demo.py            # Visualization demo
+├── demo_visualization.py     # Full visualization demo
+├── VISUALIZATION_GUIDE.md    # Visualization documentation
+├── requirements.txt
+├── LICENSE
 └── README.md
-└── requirements.txt
 ```
 
 ## Overview
@@ -47,7 +51,7 @@ The GNN model implemented in this repository consists of the following layers:
 Run the following commands on `Windows`:
 
 ```
-git clone https://github.com/Spartan-119/simple_gnn.git
+git clone https://github.com/likhith2366/Workon_GNN_Pytorch.git
 cd simple_gnn
 python -m venv gnn_venv
 gnn_venv\Scripts\activate
@@ -57,7 +61,7 @@ python main.py
 
 Run the following commands on `MacOS/Linux`:
 ```
-git clone https://github.com/Spartan-119/simple_gnn.git
+git clone https://github.com/likhith2366/Workon_GNN_Pytorch.git
 cd simple_gnn
 python3 -m venv gnn_venv
 source gnn_venv/bin/activate
@@ -66,6 +70,23 @@ python3 main.py
 ```
 
 This will load the Cora citation network dataset, train the GNN model, and evaluate its performance on the test set.
+
+## Visualization
+
+Generate interactive 3D visualizations:
+
+```bash
+python simple_demo.py
+```
+
+This creates two HTML files in `visualizations/`:
+- `graph_3d.html` - Interactive 3D graph with nodes and edges
+- `training_animation.html` - Animated training progress
+
+Open the HTML files in your browser to interact with the visualizations (drag to rotate, scroll to zoom).
+
+**Models:** GCN (Graph Convolutional Network), GAT (Graph Attention Network)
+**Tools:** PyTorch Geometric, NetworkX, Plotly
 
 ## Customization
 
