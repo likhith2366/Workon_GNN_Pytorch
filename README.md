@@ -2,7 +2,6 @@
 
 ![output](output.gif)
 
-### If you are not a techie and have 7 min, you can read the article on this project [here](https://medium.com/@abin_varghese/dive-into-graph-neural-networks-with-pytorch-a-simple-guide-49c425faf909).
 
 This repository contains a PyTorch implementation of a Graph Neural Network (GNN) for node classification tasks on graph-structured data. The implementation is based on the PyTorch Geometric library and follows a modular design, separating the code into different modules for better organization and maintainability.
 
@@ -47,7 +46,7 @@ The GNN model implemented in this repository consists of the following layers:
 Run the following commands on `Windows`:
 
 ```
-git clone https://github.com/Spartan-119/simple_gnn.git
+git clone https://github.com/likhith2366/Workon_GNN_Pytorch.git
 cd simple_gnn
 python -m venv gnn_venv
 gnn_venv\Scripts\activate
@@ -57,7 +56,7 @@ python main.py
 
 Run the following commands on `MacOS/Linux`:
 ```
-git clone https://github.com/Spartan-119/simple_gnn.git
+git clone https://github.com/likhith2366/Workon_GNN_Pytorch.git
 cd simple_gnn
 python3 -m venv gnn_venv
 source gnn_venv/bin/activate
