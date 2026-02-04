@@ -7,20 +7,25 @@ This repository contains a PyTorch implementation of a Graph Neural Network (GNN
 
 ## Project Structure
 
-The project is structured as follows:
-
 ```
-simple_gnn/
+workon_gnn_pytorch/
 ├── gnn/
-│ ├── init.py
-│ ├── model.py
-│ ├── data.py
-│ ├── train.py
-│ └── evaluate.py
-├── main.py
-└── LICENSE
+│   ├── __init__.py
+│   ├── model.py              # GCN model
+│   ├── gat_model.py          # GAT model with attention
+│   ├── data.py               # Data loading
+│   ├── train.py              # Basic training
+│   ├── train_with_viz.py     # Training with visualization
+│   ├── evaluate.py           # Model evaluation
+│   └── visualize.py          # Visualization tools
+├── visualizations/           # Generated HTML files
+├── main.py                   # Basic training script
+├── simple_demo.py            # Visualization demo
+├── demo_visualization.py     # Full visualization demo
+├── VISUALIZATION_GUIDE.md    # Visualization documentation
+├── requirements.txt
+├── LICENSE
 └── README.md
-└── requirements.txt
 ```
 
 ## Overview
@@ -65,6 +70,23 @@ python3 main.py
 ```
 
 This will load the Cora citation network dataset, train the GNN model, and evaluate its performance on the test set.
+
+## Visualization
+
+Generate interactive 3D visualizations:
+
+```bash
+python simple_demo.py
+```
+
+This creates two HTML files in `visualizations/`:
+- `graph_3d.html` - Interactive 3D graph with nodes and edges
+- `training_animation.html` - Animated training progress
+
+Open the HTML files in your browser to interact with the visualizations (drag to rotate, scroll to zoom).
+
+**Models:** GCN (Graph Convolutional Network), GAT (Graph Attention Network)
+**Tools:** PyTorch Geometric, NetworkX, Plotly
 
 ## Customization
 
